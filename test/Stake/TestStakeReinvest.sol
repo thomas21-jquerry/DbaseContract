@@ -31,7 +31,7 @@ contract TestStakeReinvest is Test {
     uint256 decimals;
 
     function setUp() public virtual {
-        uint256 mainnetFork = vm.createFork(vm.envString("URL_ETH_MAINNET"));
+        uint256 mainnetFork = vm.createFork(vm.envString("URL_BASE_MAINNET"));
         vm.selectFork(mainnetFork);
 
         ponzio = new PonzioTheCat();

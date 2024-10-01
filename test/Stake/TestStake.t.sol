@@ -30,7 +30,7 @@ contract TestStake is PonzioTheCatFixture {
         rewardsAmount = 1000 * 10 ** decimals;
     }
 
-    function test_initialState() public {
+    function test_initialState() public view {
         // ponzio
         assertEq(ponzio.totalSupply(), ponzio.INITIAL_SUPPLY());
         assertEq(ponzio.balanceOf(address(this)), ponzio.INITIAL_SUPPLY());

@@ -26,9 +26,9 @@ contract Router is IRouter, ReentrancyGuard {
     /// @inheritdoc IRouter
     IPonzioTheCat public immutable PONZIO;
     /// @notice the address of the Uniswap V2 Router
-    address internal constant UNISWAPV2_ROUTER_ADDR = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
+    address internal constant UNISWAPV2_ROUTER_ADDR = 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24;
     /// @notice the address of the WETH token
-    address internal constant WETH_ADDR = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address internal constant WETH_ADDR = 0x4200000000000000000000000000000000000006;
 
     constructor(address lpToken, address ponzioTheCatAddress) {
         LP_TOKEN = IERC20(lpToken);
