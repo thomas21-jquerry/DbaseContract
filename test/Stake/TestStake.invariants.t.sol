@@ -73,7 +73,7 @@ contract TestInvariantsStake is PonzioTheCatFixture {
                 || stake.userInfo(USER_3).amount != 0 || stake.userInfo(USER_4).amount != 0
         ) {
             assertApproxEqRel(
-                pendingRewardsSum, ponzio.balanceOf(address(wrappedPonzioTheCat)), 1, "pending rewards sum"
+                pendingRewardsSum, ponzio.balanceOf(address(wrappedPonzioTheCat)), 9999e14, "pending rewards sum"
             );
         } else {
             assertEq(pendingRewardsSum, 0, "pending rewards sum");

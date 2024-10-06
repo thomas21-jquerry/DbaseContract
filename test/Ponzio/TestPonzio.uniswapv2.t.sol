@@ -22,17 +22,17 @@ contract TestUniswapIntegration is Test {
     IUniswapV2Pair public uniV2Pair;
     WrappedPonzioTheCat public wrappedPonzioTheCat;
 
-    IUniswapV2Router02 routerUniV2 = IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);
-    IUniswapV2Factory uniV2Factory = IUniswapV2Factory(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f);
+    IUniswapV2Router02 routerUniV2 = IUniswapV2Router02(0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24);
+    IUniswapV2Factory uniV2Factory = IUniswapV2Factory(0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6);
 
-    address WETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address WETH = 0x4200000000000000000000000000000000000006;
     address ETH = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
     uint256 decimals;
     uint256 amountIn;
     address USER = address(1);
 
     function setUp() public virtual {
-        uint256 mainnetFork = vm.createFork(vm.envString("URL_ETH_MAINNET"));
+        uint256 mainnetFork = vm.createFork(vm.envString("URL_BASE_MAINNET"));
         vm.selectFork(mainnetFork);
 
         ponzio = new PonzioTheCat();

@@ -30,7 +30,7 @@ contract Stake is IStake, ReentrancyGuard {
     uint256 public constant PRECISION_FACTOR = 1e18;
 
     /// @notice the address of the Uniswap V2 Router
-    address internal constant UNISWAPV2_ROUTER_ADDR = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
+    address internal constant UNISWAPV2_ROUTER_ADDR = 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24;
 
     /// @notice Mapping from user address to UserInfo
     mapping(address => UserInfo) internal _userInfo;

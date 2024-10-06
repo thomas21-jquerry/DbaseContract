@@ -59,7 +59,7 @@ contract TestRouterAddLiquidity is Test {
     }
 
     function test_addLiquidityWeth() public {
-        pairAddr = UniswapV2Library.pairFor(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f, address(ponzio), WETH);
+        pairAddr = UniswapV2Library.pairFor(0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6, address(ponzio), WETH);
         IWETH(WETH).deposit{ value: 3 ether }();
         IWETH(WETH).approve(address(router), 3 ether);
         ponzio.approve(address(router), 500_000 * 10 ** decimals);
@@ -81,7 +81,7 @@ contract TestRouterAddLiquidity is Test {
     }
 
     function test_addLiquidityEth() public {
-        pairAddr = UniswapV2Library.pairFor(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f, address(ponzio), WETH);
+        pairAddr = UniswapV2Library.pairFor(0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6, address(ponzio), WETH);
         ponzio.approve(address(router), 500_000 * 10 ** decimals);
 
         skip(1 weeks);
